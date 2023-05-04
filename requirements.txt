@@ -1,0 +1,2 @@
+pyttsx3==2.90
+Requests==2.30.0
