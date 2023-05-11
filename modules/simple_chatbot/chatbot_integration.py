@@ -1,8 +1,17 @@
 import requests
 
-API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
-headers = {"Authorization": "Bearer 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"}
+# As a temporary solution, create a new file called secret.py in the same directory as this file.
+# then add the headers variable containing the header and import it here.
+from modules.simple_chatbot.secret import headers
 
+
+API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
+
+# Change the header to your own personal headers file here!
+# To get your headers file, refer to:
+# https://huggingface.co/microsoft/DialoGPT-large
+
+headers = headers
 class ChatbotIntegration:
     __generated_responses = []
     __past_user_inputs = []
